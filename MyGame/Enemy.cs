@@ -20,6 +20,28 @@ namespace MyGame
         {
             return name;
         }
+
+        public float GetHealth()
+        {
+            return health;
+        }
+
+        public float GetShield()
+        {
+            return shield;
+        }
+        public void SetName(string name)
+        {
+            
+            if (name.Length >=8 )
+            {
+                this.name = name.Substring(0, 8).Trim();
+            }
+            else
+            {
+                this.name = name;
+            }
+        }
         public void TakeDamage(float damage)
         {
             shield -= damage;

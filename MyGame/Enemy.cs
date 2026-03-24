@@ -1,5 +1,5 @@
 using System;
-using System.Diagnostics.Contracts;
+
 
 namespace MyGame
 {
@@ -52,6 +52,20 @@ namespace MyGame
                 shield = 0;
                 health -= damageStillToInflict;
                 if (health < 0) health = 0;
+            }
+        }
+        public void PickPowerUp(PowerUp power, float v)
+        {
+            if (power == PowerUp.Health)
+            {
+
+                if (v <= 100)
+                    this.health += v;
+            }
+            else if (power == PowerUp.Shield)
+            {
+                if (v <= 100)
+                    this.shield += v;
             }
         }
     }

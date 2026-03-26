@@ -38,10 +38,15 @@ namespace RandomDungeon
 
             // Mostra a Lista de Inimigos Atualmente na Arena
             // CÓDIGO AQUI
-            arena.GetEnemies();
+            // Console.Write("Arena: ");
+            // foreach (var x in arena.GetEnemies())
+            // {
+            //     Console.Write(x.GetName()+ " ");
+            // }
 
+            arena.ShowEnemies();
             // Repetir Batalha (Enquanto Existe Mais do que 1 Inimigo)
-            while (arena.GetEnemies().Count < 0)
+            while (arena.GetEnemies().Count > 0)
             {
                 // Obter a Lista Atual de Inimigos
                 List<Enemy> enemies = arena.GetEnemies();

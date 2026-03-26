@@ -37,21 +37,30 @@ namespace RandomDungeon
         public void ShowEnemies()
         {
             // CÓDIGO AQUI
-            foreach (var enemy in enemies)
-            {
-                Console.WriteLine($"Arena:{enemy}");
-            }
+            Console.Write("Arena: ");
+           foreach (Enemy x in GetEnemies())
+             {
+                 Console.Write(x.GetName()+ " ");
+             }
         }
-        
+
         // Simula uma Batalha Entre Dois Inimigos
         public void Battle(Enemy attacker, Enemy defender)
         {
             // Subtrai o Ataque do Atacante à Vida do Defensor
             // Garante que a Vida Não Fique Negativa
             // CÓDIGO AQUI
+            attacker.SetAttack(attacker.GetAttack());
             
+            defender.SetHealth(attacker.GetAttack());
+
             // Se a Vida do Defensor Chegar a 0, Remove-o da Arena
             // CÓDIGO AQUI
+            if ( defender.GetHealth() == 0)
+            {
+                RemoveEnemy(defender);
+            }
+            
         }
     }
 }

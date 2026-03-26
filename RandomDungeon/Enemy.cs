@@ -62,7 +62,8 @@ namespace RandomDungeon
         public override string ToString()
         {
             // CÓDIGO AQUI
-            return $"{name} ({health}, {attack})";
+            return $"{this.name} ({this.health}, {this.attack})";
+           
         }
 
         public static Enemy GenerateRandomEnemy(int seed)

@@ -38,10 +38,10 @@ namespace RandomDungeon
         {
             // CÓDIGO AQUI
             Console.Write("Arena: ");
-           foreach (Enemy x in GetEnemies())
-             {
-                 Console.Write(x.GetName()+ " ");
-             }
+            foreach (Enemy x in GetEnemies())
+            {
+                Console.Write(x.GetName() + " ");
+            }
         }
 
         // Simula uma Batalha Entre Dois Inimigos
@@ -50,17 +50,20 @@ namespace RandomDungeon
             // Subtrai o Ataque do Atacante à Vida do Defensor
             // Garante que a Vida Não Fique Negativa
             // CÓDIGO AQUI
-          
-            
-            defender.SetHealth(attacker.GetAttack());
+
+            while (defender.GetHealth() >= 1)
+            {
+                defender.SetHealth(attacker.GetAttack());
+
+            }
 
             // Se a Vida do Defensor Chegar a 0, Remove-o da Arena
             // CÓDIGO AQUI
-            if ( defender.GetHealth() <= 0)
+            if (defender.GetHealth() <= 0)
             {
                 RemoveEnemy(defender);
             }
-            
+
         }
     }
 }

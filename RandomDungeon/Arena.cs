@@ -37,6 +37,10 @@ namespace RandomDungeon
         public void ShowEnemies()
         {
             // CÓDIGO AQUI
+            foreach (var enemy in enemies)
+            {
+                Console.WriteLine($"Arena:{enemy}");
+            }
         }
         
         // Simula uma Batalha Entre Dois Inimigos

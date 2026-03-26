@@ -62,6 +62,13 @@ namespace RandomDungeon
         public override string ToString()
         {
             // CÓDIGO AQUI
+            return $"{name} ({health}, {attack})";
+        }
+
+        public static Enemy GenerateRandomEnemy(int seed)
+        {
+            Enemy e1 = new Enemy("pedro",2,2);
+            return e1;
         }
     }
 }

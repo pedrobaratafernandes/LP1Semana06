@@ -46,7 +46,7 @@ namespace RandomDungeon
 
             arena.ShowEnemies();
             // Repetir Batalha (Enquanto Existe Mais do que 1 Inimigo)
-            while (arena.GetEnemies().Count > 0)
+            while (arena.GetEnemies().Count >= 0)
             {
                 // Obter a Lista Atual de Inimigos
                 List<Enemy> enemies = arena.GetEnemies();

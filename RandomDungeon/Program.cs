@@ -56,9 +56,13 @@ namespace RandomDungeon
 
                 // Selecionar Aleatoriamente um Defensor
                 // Garantindo que Não Seja o Mesmo que o Atacante
-                int defenderIndex;
+                int defenderIndex = random.Next(enemies.Count);
                 // CÓDIGO AQUI
-                defenderIndex = random.Next(enemies.Count);
+                if (attackerIndex != defenderIndex)
+                {
+                    defenderIndex = random.Next(enemies.Count);
+
+                }
 
                 // Obter os Objetos Atacante e Defensor
                 Enemy attacker = enemies[attackerIndex];

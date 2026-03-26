@@ -50,7 +50,7 @@ namespace RandomDungeon
             // Subtrai o Ataque do Atacante à Vida do Defensor
             // Garante que a Vida Não Fique Negativa
             // CÓDIGO AQUI
-            attacker.SetAttack(5);
+          
             
             defender.SetHealth(attacker.GetAttack());
 
